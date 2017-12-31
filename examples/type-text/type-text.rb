@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'serialport'
-require './calc.rb'
+require '../ti-link-protocol.rb'
 
 @sp = SerialPort.new("/dev/ttyUSB0", 115200)
 

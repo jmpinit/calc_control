@@ -1,9 +1,16 @@
-require 'RMagick'
+require 'rmagick'
 require 'rubygems'
 require 'serialport'
-require './calc.rb'
+require '../ti-link-protocol.rb'
 
-@sp = SerialPort.new("/dev/ttyUSB0", 115200)
+if ARGV.length != 2
+  puts "Usage: draw-image.rb <image file> <serial port>"
+  exit(1)
+end
+
+serialPortPath = ARGV[1]
+
+@sp = SerialPort.new(serialPortPath, 115200)
 
 def pressKey(key)
 	@sp.putc(key.chr);

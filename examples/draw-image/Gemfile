@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+
+# Added at 2017-12-31 22:04:14 +0000 by debian:
+gem "rmagick", "~> 2.16"
+
+
+# Added at 2017-12-31 22:56:57 +0000 by debian:
+gem "serialport", "~> 1.3"
